@@ -1,12 +1,12 @@
 
 import React from 'react';
-import { User, Waves, Mountain, Football, BookOpen, Clipboard } from 'lucide-react';
+import { User, Waves, Mountain, Book, BookOpen, Clipboard } from 'lucide-react';
 
 const AboutSection: React.FC = () => {
   const activities = [
     { icon: Waves, name: 'Surfing', description: 'Catching waves as an avid surfer' },
     { icon: Mountain, name: 'Skiing', description: 'Carving down slopes on ski adventures' },
-    { icon: Football, name: 'Football', description: 'Competing on the football field' },
+    { icon: Book, name: 'Football', description: 'Competing on the football field' },
     { icon: BookOpen, name: 'Reading', description: 'Expanding horizons through reading' },
     { icon: Clipboard, name: 'Farming', description: 'Connecting with the earth through farming' }
   ];

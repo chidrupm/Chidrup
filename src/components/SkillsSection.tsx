@@ -1,9 +1,10 @@
 
 import React from 'react';
 import { Code, Database, Settings } from 'lucide-react';
+import { LucideIcon } from 'lucide-react';
 
 interface SkillCategory {
-  icon: React.FC<{ size?: number, className?: string }>;
+  icon: LucideIcon;
   title: string;
   skills: string[];
 }
