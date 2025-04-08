@@ -48,33 +48,62 @@ export const MountainParallax: React.FC = () => {
       {/* Background Sky */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-300 via-blue-200 to-blue-100" />
       
-      {/* Far Mountains */}
-      <ParallaxLayer speed="slow" className="absolute bottom-0 w-full h-[30%]">
-        <div className="absolute bottom-0 w-full h-full bg-mountain-stone/30 rounded-t-[100%] transform translate-y-1/4" />
+      {/* Far Mountains Layer */}
+      <ParallaxLayer speed="slow" className="absolute bottom-0 w-full h-[45%]">
+        <div 
+          className="absolute bottom-0 w-full h-full bg-cover bg-bottom"
+          style={{ 
+            backgroundImage: "url('https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?auto=format&fit=crop&w=1920&q=80')",
+            backgroundSize: "cover",
+            opacity: 0.6
+          }}
+        />
       </ParallaxLayer>
       
-      {/* Mid Mountains */}
-      <ParallaxLayer speed="medium" className="absolute bottom-0 w-full h-[25%]">
-        <div className="absolute bottom-0 w-full h-full bg-mountain-stone/50 rounded-t-[100%] transform translate-y-1/3" />
+      {/* Mid Mountains Layer */}
+      <ParallaxLayer speed="medium" className="absolute bottom-0 w-full h-[35%]">
+        <div 
+          className="absolute bottom-0 w-full h-full bg-cover bg-bottom"
+          style={{ 
+            backgroundImage: "url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1920&q=80')",
+            backgroundSize: "cover",
+            opacity: 0.7
+          }}
+        />
       </ParallaxLayer>
       
-      {/* Front Mountains */}
-      <ParallaxLayer speed="fast" className="absolute bottom-0 w-full h-[20%]">
-        <div className="absolute bottom-0 w-full h-full bg-mountain-stone/70 rounded-t-[80%] transform translate-y-1/2" />
+      {/* Front Mountains Layer */}
+      <ParallaxLayer speed="fast" className="absolute bottom-0 w-full h-[25%]">
+        <div 
+          className="absolute bottom-0 w-full h-full bg-cover bg-bottom"
+          style={{ 
+            backgroundImage: "url('https://images.unsplash.com/photo-1458668383970-8ddd3927deed?auto=format&fit=crop&w=1920&q=80')",
+            backgroundSize: "cover",
+            opacity: 0.8
+          }}
+        />
       </ParallaxLayer>
       
-      {/* Snow Caps */}
-      <ParallaxLayer speed="slow" className="absolute bottom-[20%] w-full h-[5%]">
-        <div className="absolute bottom-0 w-1/4 h-full bg-mountain-snow rounded-t-[100%] translate-x-1/4" />
-        <div className="absolute bottom-0 w-1/5 h-full bg-mountain-snow rounded-t-[100%] translate-x-3/4" />
+      {/* Snow Caps Overlay */}
+      <ParallaxLayer speed="slow" className="absolute bottom-[25%] w-full h-[10%]">
+        <div 
+          className="absolute w-full h-full bg-cover bg-center"
+          style={{ 
+            backgroundImage: "url('https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1920&q=80')",
+            backgroundSize: "cover",
+            opacity: 0.25,
+            filter: "brightness(1.5) contrast(1.2)"
+          }}
+        />
       </ParallaxLayer>
       
-      {/* Floating Cloud */}
+      {/* Floating Clouds */}
       <div className="absolute top-[15%] left-0 w-[150px] h-[60px] bg-white rounded-full opacity-80 animate-float-cloud" />
       <div className="absolute top-[25%] left-[-50px] w-[100px] h-[40px] bg-white rounded-full opacity-60 animate-float-cloud" style={{ animationDelay: '15s' }} />
+      <div className="absolute top-[10%] right-[10%] w-[120px] h-[50px] bg-white rounded-full opacity-70 animate-float-cloud" style={{ animationDelay: '8s' }} />
       
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+      {/* Gradient Overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent" />
     </div>
   );
 };
